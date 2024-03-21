@@ -21,7 +21,7 @@ class NetBN(nn.Module):
         self.conv9 = nn.Conv2d(in_channels=1024, out_channels=2048, kernel_size=3, stride=1, padding=1, bias=True)
         self.conv10 = nn.Conv2d(in_channels=2048, out_channels=4096, kernel_size=3, stride=1, padding=1, bias=True)
         
-        self.gap = nn.AvgPool2d(kernel_size=2, stride=2, padding=0)
+        self.gap = nn.AvgPool2d(kernel_size=8, stride=1, padding=0)
         self.conv11 = nn.Conv2d(in_channels=4096, out_channels=10, kernel_size=1, stride=1, padding=0, bias=True)
     
     def forward(self, x):
