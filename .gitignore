@@ -6,6 +6,7 @@ profile_default/
 ipython_config.py
 
 .DS_Store
+.vscode/settings.json
 
 __pycache__
 */__pycache__/*
