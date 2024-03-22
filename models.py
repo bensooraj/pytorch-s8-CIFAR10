@@ -77,6 +77,8 @@ class NetBN(nn.Module):
         self.convBlock11 = nn.Sequential(
             nn.Conv2d(in_channels=64, out_channels=10, kernel_size=1, stride=1, padding=0, bias=True)
         )
+
+        self.dropout = nn.Dropout2d(p=0.25)
     
     def forward(self, x):
         x = self.convBlock1(x)
@@ -84,6 +86,7 @@ class NetBN(nn.Module):
         x = self.convBlock3(x)
         x = self.pool1(x)
 
+        x = self.dropout(x)
         x = self.convBlock4(x)
         x = self.convBlock5(x)
         x = self.convBlock6(x)
@@ -91,6 +94,7 @@ class NetBN(nn.Module):
         x = self.convBlock7(x)
         x = self.pool2(x)
 
+        x = self.dropout(x)
         x = self.convBlock8(x)
         x = self.convBlock9(x)
         x = self.convBlock10(x)
