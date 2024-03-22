@@ -40,14 +40,14 @@ class NetBN(nn.Module):
             nn.ReLU()
         )
         self.convBlock6 = nn.Sequential(
-            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64),
+            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1, bias=True),
+            nn.BatchNorm2d(32),
             nn.ReLU()
         )
 
         # Transition Block 2
         self.convBlock7 = nn.Sequential(
-            nn.Conv2d(in_channels=64, out_channels=8, kernel_size=1, stride=1, padding=0, bias=True),
+            nn.Conv2d(in_channels=32, out_channels=8, kernel_size=1, stride=1, padding=0, bias=True),
             nn.BatchNorm2d(8),
             nn.ReLU()
         )
@@ -65,8 +65,8 @@ class NetBN(nn.Module):
             nn.ReLU()
         )
         self.convBlock10 = nn.Sequential(
-            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, stride=1, padding=1, bias=True),
-            nn.BatchNorm2d(64),
+            nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, stride=1, padding=1, bias=True),
+            nn.BatchNorm2d(32),
             nn.ReLU()
         )
         
@@ -75,7 +75,7 @@ class NetBN(nn.Module):
 
         # Output Block
         self.convBlock11 = nn.Sequential(
-            nn.Conv2d(in_channels=64, out_channels=10, kernel_size=1, stride=1, padding=0, bias=True)
+            nn.Conv2d(in_channels=32, out_channels=10, kernel_size=1, stride=1, padding=0, bias=True)
         )
 
         self.dropout = nn.Dropout2d(p=0.25)
