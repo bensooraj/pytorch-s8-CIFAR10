@@ -86,7 +86,7 @@ All set!
 3. [Group Normalization](./cifar10_playground_group_norm.ipynb) 
 
 ### 4.2 Pull requests
-The individual PRs contain a more details,
+The individual PRs contain more details,
 1. [Batch Normalization](https://github.com/bensooraj/pytorch-s8-CIFAR10/pull/7) 
 2. [Layer Normalization](https://github.com/bensooraj/pytorch-s8-CIFAR10/pull/8) 
 3. [Group Normalization](https://github.com/bensooraj/pytorch-s8-CIFAR10/pull/9) 
