@@ -18,7 +18,6 @@ class NetBN(nn.Module):
             nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=1, padding=1, bias=True),
             nn.ReLU(),
             nn.BatchNorm2d(16),
-            nn.Dropout2d(p=0.10)
         )
 
         # Transition Block 1
@@ -34,6 +33,7 @@ class NetBN(nn.Module):
             nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=1, padding=1, bias=True),
             nn.ReLU(),
             nn.BatchNorm2d(16),
+            nn.Dropout2d(p=0.15)
         )
         self.convBlock5 = nn.Sequential(
             nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=1, bias=True),
@@ -59,6 +59,7 @@ class NetBN(nn.Module):
             nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=1, padding=1, bias=True),
             nn.ReLU(),
             nn.BatchNorm2d(16),
+            nn.Dropout2d(p=0.15)
         )
         self.convBlock9 = nn.Sequential(
             nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=1, bias=True),
@@ -79,15 +80,12 @@ class NetBN(nn.Module):
             nn.Conv2d(in_channels=32, out_channels=10, kernel_size=1, stride=1, padding=0, bias=True)
         )
 
-        self.dropout = nn.Dropout2d(p=0.10)
-    
     def forward(self, x):
         x = self.convBlock1(x)
         x = self.convBlock2(x)
         x = self.convBlock3(x)
         x = self.pool1(x)
 
-        x = self.dropout(x)
         x = self.convBlock4(x)
         x = self.convBlock5(x)
         x = self.convBlock6(x)
@@ -95,7 +93,6 @@ class NetBN(nn.Module):
         x = self.convBlock7(x)
         x = self.pool2(x)
 
-        x = self.dropout(x)
         x = self.convBlock8(x)
         x = self.convBlock9(x)
         x = self.convBlock10(x)
