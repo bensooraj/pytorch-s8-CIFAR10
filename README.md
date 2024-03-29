@@ -103,7 +103,7 @@ The individual PRs contain more details,
 ## 5. Challenges
 1. The MPS backend doesn't work properly with `shuffle=True` for [`torch.utils.data.DataLoader`](https://pytorch.org/docs/stable/data.html#module-torch.utils.data).
 
-## 5. Resources
+## 6. Resources
 1. [Accelerated PyTorch training on Mac](https://developer.apple.com/metal/pytorch/)
 2. [PyTorch: MPS BACKEND](https://pytorch.org/docs/master/notes/mps.html)
 3. [A Simple Conv2D Dimensions Calculator & Logger](https://charisoudis.com/blog/a-simple-conv2d-dimensions-calculator-logger)
