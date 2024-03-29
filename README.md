@@ -1,9 +1,9 @@
-# PyTorch MNIST Dataset Deep Learning Experiment
+# PyTorch CIFAR10 Dataset Deep Learning Experiment
 
 ## 1. Introduction
 This project demonstrates the use of,
 1. PyTorch to write neural networks
-2. MNIST dataset for image classification and
+2. CIFAR10 dataset for image classification and
 3. Metal Performance Shaders (MPS) backend for GPU training acceleration (on Mac computers with Apple silicon)
 
 ## 2. Project structure
